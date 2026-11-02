@@ -234,7 +234,8 @@ dependencies = [
 
 [[package]]
 name = "rage-formats"
-version = "0.5.0"
+version = "0.5.1"
+source = "git+https://github.com/Mesrine67/rage-formats?rev=99dc484f96a66e2f1897885b68f9d7b34437aa3c#99dc484f96a66e2f1897885b68f9d7b34437aa3c"
 dependencies = [
  "anyhow",
  "flate2",

@@ -14,6 +14,18 @@ renders, a bitmap font for labels, and a wasm-exposed glTF exporter.
 rage-render = "0.2"
 ```
 
+## FXMP fork: reproducible Rust dependency
+
+This FXMP fork resolves rage-formats from the pinned
+[Mesrine67/rage-formats](https://github.com/Mesrine67/rage-formats) Git
+revision recorded in Cargo.toml and Cargo.lock. It no longer requires a
+sibling ../rage-formats directory to compile or test.
+
+Run cargo test --locked from a standalone checkout. When updating the upstream
+parser, review format/API compatibility, pin the audited commit and regenerate
+Cargo.lock with Cargo. FXMP Tools should consume the Rust library API directly;
+the renderer does not need a separate Tauri IPC bridge for internal Rust calls.
+
 ## Pipeline
 
 ```
